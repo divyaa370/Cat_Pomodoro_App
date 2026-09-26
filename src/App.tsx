@@ -54,7 +54,7 @@ function App() {
       messageInterval = setInterval(() => {
         setEncouragement(messages[index]); 
         index = (index + 1) % messages.length;
-      }, 4000); // every 4 sec 
+      }, 40000); // every 4 sec 
     } else {
       setEncouragement("")
     }

@@ -7,9 +7,8 @@ function createWindow() {
     const mainWindow = new BrowserWindow({
         title: 'MyPomo',
         width: 400,
-        height: 400,
-        frame: false,
-        titleBarStyle: 'hidden',
+        height: 430,
+        resizable: false,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: false,
@@ -22,8 +21,6 @@ function createWindow() {
         protocol: 'file:',
         slashes: true,
     });
-    mainWindow.setMenuBarVisibility(false); //hide menu bar
-    mainWindow.setWindowButtonVisibility(false); //hide window buttons
     mainWindow.loadURL(startUrl); //load app in electron
 
     //listen for close event from react app
